@@ -12,7 +12,7 @@
 }
 
 .cards-cars {
-  overflow: hidden;
+  overflow: auto;
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -52,6 +52,16 @@
   margin-top: 8px;
 }
 
+.car-details h5 {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 1.4;
+  opacity: 1;
+  padding: 10px 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
 
 .side-bar {
   align-items: center;
@@ -68,8 +78,8 @@
   height: 8vh;
   position: relative;
   object-fit: cover;
-  top: -15px;
-  left: 150px;
+  top: -40px;
+  left: 30%;
   border: 3px solid white;
   border-radius: 50%;
 }
