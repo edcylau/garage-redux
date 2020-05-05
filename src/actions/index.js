@@ -33,8 +33,8 @@ export function createCar(body, garage, callback) {
   };
 }
 
-export function fetchCar(garage, id) {
-  const url = `https://wagon-garage-api.herokuapp.com/${garage}/cars/${id}`;
+export function fetchCar(id) {
+  const url = `https://wagon-garage-api.herokuapp.com/cars/${id}`;
 
   const promise = fetch(url)
     .then(response => response.json());

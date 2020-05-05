@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import { reduxForm, Field } from 'redux-form';
 import { createCar } from '../actions';
+import Aside from './aside';
+
 
 class CarsNew extends Component {
   onSubmit = (values) => {
@@ -27,43 +30,50 @@ class CarsNew extends Component {
 
   render() {
     return (
-      <div>
-        <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
-          <Field
-            label="Brand"
-            name="brand"
-            type="text"
-            component={this.renderField}
-          />
-          <Field
-            className="form-control"
-            label="Model"
-            name="model"
-            type="text"
-            component={this.renderField}
-          />
-          <Field
-            className="form-control"
-            label="Owner"
-            name="owner"
-            type="text"
-            component={this.renderField}
-          />
-          <Field
-            className="form-control"
-            label="Plate"
-            name="plate"
-            type="text"
-            component={this.renderField}
-          />
-          <button
-            className="btn btn-primary"
-            type="submit"
-            disabled={this.props.pristine || this.props.submitting}
-          >
-            Create Car
-          </button>
-        </form>
+      <div className="container-thin">
+        <Aside garage={this.props.garage}>
+          <Link className="button" to="/">
+            Back to list
+          </Link>
+        </Aside>
+        <div className="form">
+          <form onSubmit={this.props.handleSubmit(this.onSubmit)}>
+            <Field
+              label="Brand"
+              name="brand"
+              type="text"
+              component={this.renderField}
+            />
+            <Field
+              className="form-control"
+              label="Model"
+              name="model"
+              type="text"
+              component={this.renderField}
+            />
+            <Field
+              className="form-control"
+              label="Owner"
+              name="owner"
+              type="text"
+              component={this.renderField}
+            />
+            <Field
+              className="form-control"
+              label="Plate"
+              name="plate"
+              type="text"
+              component={this.renderField}
+            />
+            <button
+              className="btn btn-primary"
+              type="submit"
+              disabled={this.props.pristine || this.props.submitting}
+            >
+              Create Car
+            </button>
+          </form>
+        </div>
       </div>
     );
   }

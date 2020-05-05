@@ -7,6 +7,8 @@
   display: flex;
   margin: 50px 60px;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px #DBDBDB;
+  height: 80vh;
 }
 
 .cards-cars {
@@ -14,7 +16,7 @@
   display: flex;
   flex-direction: column;
   width: 70%;
-  height: 100vh;
+  height: auto;
   background-color: #dbdbdb;
 }
 
@@ -29,7 +31,7 @@
 
 .car-card img {
   object-fit: cover;
-  margin: 5pxkj;
+  margin-left: 2%;
 }
 
 .car-details {
@@ -89,8 +91,14 @@
   background: white;
   color: black;
   padding: 10px 40px;
-  margin-top: 20px;
+  margin-right: 20%;
+  margin-left: 20%;
   border: 2px solid black;
   border-radius: 10px;
+
 }
 
+.form {
+  margin: auto;
+  padding: 10px 10px;
+}
